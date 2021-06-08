@@ -15,6 +15,9 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 100% !important;
         font-weight: 500;
     }
+    body style, body script {
+        display: none;
+    }
     body {
         overflow-x: hidden;
     }
