@@ -1,5 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 
+export const StyledTheme = {
+    theme: {
+        primary: "rgb(84, 65, 160)",
+        secondary: "",
+
+        light: "",
+        dark: "",
+        success: "",
+        danger: "",
+        warning: "",
+    }
+}
+
 export const GlobalStyle = createGlobalStyle`
     body, body * {
         font-family: Roboto, Arial;
