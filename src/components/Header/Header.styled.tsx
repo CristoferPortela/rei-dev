@@ -2,14 +2,24 @@ import styled from 'styled-components';
 
 export const Brand = styled.div`
     @media screen and (min-width: 992px) {
-        /* flex: 0 0 auto; */
-        /* width: auto; */
+        flex: 0 0 auto;
+        width: auto;
         display: flex;
-        /* justify-content: flex-end; */
+        justify-content: center;
+        align-items: center;
     }
     img {
-        width: 125px;
+        width: 75px;
         border-radius: 4px;
+    }
+    p {
+        color: ${(props) => props.theme.primary};
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+        @media screen and (min-width: 992px) {
+            margin-left: -20px;
+        }
     }
 `;
 
@@ -24,7 +34,7 @@ export const NavMenu = styled.nav`
         display: flex;
         justify-content: flex-start;
         li {
-            border-right: 1px solid rgb(84, 65, 160);
+            border-right: 1px solid ${(props) => props.theme.primary};
             padding-right: 20px;
             padding-left: 20px;
             padding-top: 2px;
