@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
+const sliderSize = "400px";
+
 export const Container = styled.article`
-    height: 350px;
+    height: ${sliderSize};
 `;
 
 export const Header = styled.header`
     background-color: rgb(64, 45, 140);;
-    height: 350px;
+    height: ${sliderSize};
     transform: skew(20deg, 0);
     margin-left: -8.333%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
@@ -16,9 +18,11 @@ export const Header = styled.header`
         font-size: 3rem;
         padding-bottom: 2rem;
         padding-top: 2rem;
+        font-weight: 500;
     }
     p {
         color: #fff;
+        line-height: 1.7;
     }
     div {
         display: block;
@@ -28,8 +32,9 @@ export const Header = styled.header`
 `;
 
 export const Image = styled.img`
-    height: 350px;
+    height: ${sliderSize};
     /* position: relative; */
     margin-left: -8.33%;
+    min-width: ${() => window.outerWidth / 2}px;
     /* z-index: -1; */
 `;
