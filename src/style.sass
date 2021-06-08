@@ -1,0 +1,13 @@
+.flex 
+    display: flex 
+
+.container 
+    padding: 1rem 2rem
+    @media screen and ( min-width: 992px )
+        padding: 1rem 4rem
+
+@for $i from 1 through 12
+    $val: (8.33 * $i) * 1%
+    .flex-#{$i}
+        width: $val
+        flex: 0 0 $val
