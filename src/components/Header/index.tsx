@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { NavMenu, Brand } from './Header.styled';
-import Logo from '../../assets/img/logo.webp';
+import Logo from '../../assets/img/logo2.webp';
 import { FlexItem, Row } from '../Styled/Flex';
 import { Button } from '../Styled/Button';
 import { Container } from '../Styled/Container';
@@ -26,6 +26,9 @@ export const Header = () => {
                             {/* Rei dev */}
                             <img src={Logo} alt="Rei-dev logo" />
                         </Link>
+                        <p>
+                            Rei dev
+                        </p>
                     </Brand>
                 </FlexItem>
                 <FlexItem size={6}>
