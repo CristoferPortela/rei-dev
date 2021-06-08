@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./components/Header";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { GlobalStyle } from "./StyledGlobal";
 import './style.sass'
 import { Slider } from "./components/Slider";
