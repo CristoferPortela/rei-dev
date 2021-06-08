@@ -5,6 +5,7 @@ import { GlobalStyle } from "./StyledGlobal";
 import './style.sass'
 import { Slider } from "./components/Slider";
 import { Pages } from './Pages';
+import 'material-icons';
 
 function App() {
   return (
