@@ -1,18 +1,11 @@
 import styled from 'styled-components';
 
-export const HeaderStyled = styled.header.attrs({
-    className: 'flex container'
-})`
-    background-color: #fafbfc;
-    align-items: center;
-`;
-
 export const Brand = styled.div`
     @media screen and (min-width: 992px) {
-        flex: 0 0 15%;
-        width: 15%;
+        /* flex: 0 0 auto; */
+        /* width: auto; */
         display: flex;
-        justify-content: flex-end;
+        /* justify-content: flex-end; */
     }
     img {
         width: 125px;
@@ -23,8 +16,6 @@ export const Brand = styled.div`
 export const NavMenu = styled.nav`
     height: 100%;
     @media screen and (min-width: 992px) {
-        flex: 0 0 80%;
-        width: 80%;
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
