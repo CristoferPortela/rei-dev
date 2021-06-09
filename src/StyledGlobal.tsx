@@ -1,7 +1,27 @@
 import { createGlobalStyle } from 'styled-components';
+import 'styled-components';
 
-export const StyledTheme = {
-    theme: {
+interface iTheme {
+    colors: {
+
+        primary: string;
+        secondary: string;
+
+        light: string;
+        dark: string;
+        success: string;
+        danger: string;
+        warning: string;
+    }
+}
+
+declare module 'styled-components' {
+    export interface DefaultTheme extends iTheme { }
+}
+
+export const StyledTheme: iTheme = {
+    colors: {
+
         primary: "rgb(84, 65, 160)",
         secondary: "",
 
@@ -12,6 +32,7 @@ export const StyledTheme = {
         warning: "",
     }
 }
+
 
 export const GlobalStyle = createGlobalStyle`
     body, body * {

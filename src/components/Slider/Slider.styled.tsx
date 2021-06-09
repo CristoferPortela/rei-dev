@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-const sliderSize = "400px";
+const sliderSize = "450px";
 
 export const Container = styled.article`
     height: ${sliderSize};
 `;
 
 export const Header = styled.header`
-    background-color: rgb(64, 45, 140);;
+    background-color: ${(props) => props.theme.colors.primary};
     height: ${sliderSize};
     transform: skew(20deg, 0);
     margin-left: -8.333%;
