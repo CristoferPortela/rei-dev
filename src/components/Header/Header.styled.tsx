@@ -13,7 +13,7 @@ export const Brand = styled.div`
         border-radius: 4px;
     }
     p {
-        color: ${(props) => props.theme.primary};
+        color: ${(props) => props.theme.colors.primary};
         font-size: 1.2rem;
         font-weight: 600;
         text-align: center;
@@ -34,7 +34,7 @@ export const NavMenu = styled.nav`
         display: flex;
         justify-content: flex-start;
         li {
-            border-right: 1px solid ${(props) => props.theme.primary};
+            border-right: 1px solid ${(props) => props.theme.colors.primary};
             padding-right: 20px;
             padding-left: 20px;
             padding-top: 2px;
