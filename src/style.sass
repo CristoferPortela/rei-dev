@@ -1,13 +1,64 @@
 .flex
     display: flex
+.flex-lg
+    @media screen and ( min-width: 992px )
+        display: flex
+
+.w-100-md
+    @media screen and ( max-width: 992px )
+        width: 100% !important
 
 .container
     padding: 1rem 2rem
     @media screen and ( min-width: 992px )
         padding: 1rem 4rem
 
+.flex-wrap-md
+    @media screen and ( max-width: 993px )
+        flex-wrap: wrap
+
 @for $i from 1 through 12
     $val: (8.33 * $i) * 1%
     .flex-#{$i}
         width: $val
         flex: 0 0 $val
+
+@for $i from 1 through 12
+    @media screen and ( min-width: 992px )
+        $val: (8.33 * $i) * 1%
+        .flex-#{$i}-lg
+            width: $val
+            flex: 0 0 $val
+
+.space-between-md
+    @media screen and ( max-width: 992px )
+        justify-content: space-between
+
+.flex-end-md
+    @media screen and ( max-width: 992px )
+        justify-content: flex-end
+
+.hidden-lg 
+    @media screen and ( min-width: 993px )
+        display: none !important
+        visibility: hidden
+
+.menu
+    transition: ease-in-out .6s
+    @media screen and ( max-width: 992px )
+        position: fixed
+        visibility: hidden
+        left: -100vw
+        top: 0
+        bottom: 0
+        z-index: 10
+        flex-direction: column
+        background-color: var(--primary)
+        width: 60vw !important
+        flex: 0 0 0 !important
+        &.active
+            visibility: visible
+            margin-left: 100vw
+        nav ul
+            flex-direction: column
+        
