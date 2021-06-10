@@ -5,8 +5,9 @@ interface iRow {
     align?: string;
 }
 
-export const Row = styled.div.attrs({ className: 'flex' })<iRow>`
+export const Row = styled.div<iRow>`
     width: 100%;
+    display: flex;
     flex-wrap: wrap;
     align-items: ${(props) => props.align || "flex-start"};
 `;
