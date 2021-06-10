@@ -37,7 +37,7 @@ export const Header = styled.header`
         color: #fff;
         line-height: 1.7;
     }
-    div {
+    &>div {
         display: block;
         width: 100%;
         @media screen and (min-width: 993px) {
