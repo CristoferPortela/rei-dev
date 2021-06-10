@@ -12,6 +12,9 @@ interface iTheme {
         success: string;
         danger: string;
         warning: string;
+    },
+    sizing: {
+        sliderHeight: number,
     }
 }
 
@@ -21,7 +24,6 @@ declare module 'styled-components' {
 
 export const StyledTheme: iTheme = {
     colors: {
-
         primary: "rgb(84, 65, 160)",
         secondary: "",
 
@@ -30,11 +32,17 @@ export const StyledTheme: iTheme = {
         success: "",
         danger: "",
         warning: "",
+    },
+    sizing: {
+        sliderHeight: 450,
     }
 }
 
 
 export const GlobalStyle = createGlobalStyle`
+    :root {
+        --primary: ${(props) => props.theme.colors.primary};
+    }
     body, body * {
         font-family: Roboto, Arial;
         font-size: 1rem;
