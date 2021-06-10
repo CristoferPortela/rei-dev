@@ -11,8 +11,8 @@ import './style.sass';
 function App() {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={StyledTheme}>
+        <GlobalStyle />
         <Router>
           <Header />
           <Slider />
