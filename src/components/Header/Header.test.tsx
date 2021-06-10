@@ -16,9 +16,7 @@ const H = () => (
 test('renders rei dev text', () => {
     render(<H />);
     const reiDevText = screen.getByAltText(/Rei-dev logo/i);
-    const menuHamburguer = screen.getByText(/menu/i);
     expect(reiDevText).toBeInTheDocument();
-    expect(menuHamburguer).toBeInTheDocument();
 });
 
 test('renders menu', () => {
