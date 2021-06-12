@@ -58,7 +58,7 @@ export const Header = () => {
                             <FlexItem size={5}>
                                 <Button border={"rgb(84, 65, 160)"} bg={"rgb(84, 65, 160)"} color={"white"}>
                                     Botão 2
-                            </Button>
+                                </Button>
                             </FlexItem>
                             <FlexItem size={2}>
                                 <Icon>
