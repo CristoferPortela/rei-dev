@@ -9,24 +9,28 @@ import img2 from './assets/img/pexels-vlada-karpovich-6114985.jpg';
 import 'material-icons';
 import './style.sass';
 
-function App() {
+const Wrapper: React.FunctionComponent = (props) => (
+  <ThemeProvider theme={StyledTheme}>
+    <GlobalStyle />
+    <Router>
+      {props.children}
+    </Router>
+  </ThemeProvider>
+)
+
+const App = () => {
   return (
-    <>
-      <ThemeProvider theme={StyledTheme}>
-        <GlobalStyle />
-        <Router>
-          <Header />
-          <Slider images={[{
-            title: "Lorem ipsum dolor sit amet.",
-            imageUrl: img2,
-            text: `<p>Consectetur adipiscing elit. Mauris varius leo fringilla turpis ultricies, et viverra erat luctus. Ut elementum molestie nisl, id varius ipsum posuere commodo.</p>
-            <p>Donec tortor velit, laoreet vel vulputate ac, scelerisque et sem. Sed at maximus lectus. Mauris porttitor turpis in mauris tincidunt accumsan. </p>`,
-            author: "Foto de Vlada Karpovich no Pexels",
-          }]} />
-          <Pages />
-        </Router>
-      </ThemeProvider>
-    </>
+    <Wrapper>
+      <Header />
+      <Slider images={[{
+        title: "Lorem ipsum dolor sit amet.",
+        imageUrl: img2,
+        text: `<p>Consectetur adipiscing elit. Mauris varius leo fringilla turpis ultricies, et viverra erat luctus. Ut elementum molestie nisl, id varius ipsum posuere commodo.</p>
+        <p>Donec tortor velit, laoreet vel vulputate ac, scelerisque et sem. Sed at maximus lectus. Mauris porttitor turpis in mauris tincidunt accumsan. </p>`,
+        author: "Foto de Vlada Karpovich no Pexels",
+      }]} />
+      <Pages />
+    </Wrapper>
   );
 }
 
