@@ -1,21 +1,29 @@
 import { createGlobalStyle } from 'styled-components';
 import 'styled-components';
 
-interface iTheme {
-    colors: {
+interface iColors {
+    primary: string;
+    secondary: string;
 
-        primary: string;
-        secondary: string;
+    light: string;
+    dark: string;
+    success: string;
+    danger: string;
+    warning: string;
+    [key: string]: string;
+}
+interface iSizing {
+    sliderHeight: number,
+}
 
-        light: string;
-        dark: string;
-        success: string;
-        danger: string;
-        warning: string;
-    },
-    sizing: {
-        sliderHeight: number,
-    }
+interface iFunctions {
+    chooseTextColor: (color: string) => string;
+}
+
+export interface iTheme {
+    colors: iColors,
+    sizing: iSizing,
+    functions: iFunctions,
 }
 
 declare module 'styled-components' {
@@ -35,6 +43,16 @@ export const StyledTheme: iTheme = {
     },
     sizing: {
         sliderHeight: 450,
+    },
+    functions: {
+        chooseTextColor: (color: string) => {
+            const red = (0xFF & (parseInt(color, 16)) * 0.299);
+            const green = (0xFF & (parseInt(color, 16) >> 0x8) * 0.587);
+            const blue = (0xFF & (parseInt(color, 16)) * 0.114);
+            
+            const rgb = red + green + blue;
+            return parseInt(rgb.toString(), 16) > 186 ? "#00000" : "#FFFFF";
+        }
     }
 }
 
