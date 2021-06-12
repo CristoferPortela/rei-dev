@@ -48,19 +48,19 @@ export const Header = () => {
                             </ul>
                         </NavMenu>
                     </FlexItem>
-                    <FlexItem size={4}>
-                        <Row align={"center"}>
-                            <FlexItem size={5}>
+                    <FlexItem size={4} id="buttons-nav-menu">
+                        <Row as="ul" align={"center"}>
+                            <FlexItem as="li" size={5}>
                                 <Button border={"rgb(84, 65, 160)"}>
                                     Botão 1
-                            </Button>
+                                </Button>
                             </FlexItem>
-                            <FlexItem size={5}>
+                            <FlexItem as="li" size={5}>
                                 <Button border={"rgb(84, 65, 160)"} bg={"rgb(84, 65, 160)"} color={"white"}>
                                     Botão 2
                                 </Button>
                             </FlexItem>
-                            <FlexItem size={2}>
+                            <FlexItem as="li" size={2}>
                                 <Icon>
                                     search
                                 </Icon>

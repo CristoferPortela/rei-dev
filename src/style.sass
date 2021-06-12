@@ -38,7 +38,7 @@
     @media screen and ( max-width: 992px )
         justify-content: flex-end
 
-.hidden-lg 
+.hidden-lg
     @media screen and ( min-width: 993px )
         display: none !important
         visibility: hidden
@@ -53,6 +53,8 @@
         bottom: 0
         z-index: 10
         flex-direction: column
+        padding: 2rem
+        padding-left: 0
         background-color: var(--primary)
         width: 60vw !important
         flex: 0 0 0 !important
@@ -61,4 +63,12 @@
             margin-left: 100vw
         nav ul
             flex-direction: column
-        
+            color: white
+        #buttons-nav-menu
+            width: 100%
+            padding: 2rem
+            &>ul
+                flex-direction: column
+                li
+                    flex: 0 0 100%
+                    width: 100%
