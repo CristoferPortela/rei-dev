@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Slider } from '.';
 import { ThemeProvider } from 'styled-components';
 import { StyledTheme } from '../../StyledGlobal';
@@ -13,7 +12,7 @@ const S = () => (
                 images={[{
                     title: "Lorem ipsum dolor sit amet.",
                     imageUrl: img2,
-                    text: ` <p>Consectetur adipiscing elit. Mauris varius leo fringilla turpis ultricies, et viverra erat luctus. Ut elementum molestie nisl, id varius ipsum posuere commodo.</p>
+                    text: `<p>Consectetur adipiscing elit. Mauris varius leo fringilla turpis ultricies, et viverra erat luctus. Ut elementum molestie nisl, id varius ipsum posuere commodo.</p>
                     <p>Donec tortor velit, laoreet vel vulputate ac, scelerisque et sem. Sed at maximus lectus. Mauris porttitor turpis in mauris tincidunt accumsan. </p>`,
                     author: "Foto de Vlada Karpovich no Pexels author",
                 }]}
@@ -25,4 +24,11 @@ test('Checking slider title', () => {
     render(<S />);
     const title = screen.getByText(/Lorem ipsum dolor sit amet./i);
     expect(title).toBeInTheDocument();
+});
+
+
+test('Checking slider image url', () => {
+    render(<S />);
+    const alt = screen.getByAltText(/Lorem ipsum dolor sit amet./i);
+    expect(alt).toBeInTheDocument();
 });
