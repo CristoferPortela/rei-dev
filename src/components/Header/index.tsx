@@ -51,12 +51,12 @@ export const Header = () => {
                     <FlexItem size={4} id="buttons-nav-menu">
                         <Row as="ul" align={"center"}>
                             <FlexItem as="li" size={5}>
-                                <Button border={"rgb(84, 65, 160)"}>
+                                <Button border={"primary"}>
                                     Botão 1
                                 </Button>
                             </FlexItem>
                             <FlexItem as="li" size={5}>
-                                <Button border={"rgb(84, 65, 160)"} bg={"rgb(84, 65, 160)"} color={"white"}>
+                                <Button border={"primary"} bg={"rgb(84, 65, 160)"} color={"white"}>
                                     Botão 2
                                 </Button>
                             </FlexItem>
