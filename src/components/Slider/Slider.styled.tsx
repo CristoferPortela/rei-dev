@@ -37,7 +37,7 @@ export const Header = styled.header`
         color: #fff;
         line-height: 1.7;
     }
-    &>div {
+    & > div {
         display: block;
         width: 100%;
         @media screen and (min-width: 993px) {
@@ -47,10 +47,10 @@ export const Header = styled.header`
 `;
 
 export const Image = styled.img`
-    @media screen and (min-width: 993px) {
+    @media screen and (min-width: 992px) {
         height: ${sliderSize};
-        margin-left: -8.33%;
-        min-width: ${() => window.outerWidth / 2}px;
+        margin-left: ${-8.33 * 1.5}%;
+        min-width: ${() => window.outerWidth / 1.8}px;
     }
     @media screen and (max-width: 992px) {
         width: 100% !important;
