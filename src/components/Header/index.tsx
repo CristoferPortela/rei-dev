@@ -20,10 +20,10 @@ export const Header = () => {
     ];
     return (
         <Container as={"header"} bg={"#fafbfc"}>
-            <Row align={"Center"} className={"space-between-md"}>
-                <FlexItem auto={true}>
+            <Row align={"start-flex"} className={"space-between-md"}>
+                <FlexItem size={[{ query: 0, value: 3 }, { query: 552, value: 2 }, { query: 992, value: "auto" }]}>
                     <Brand>
-                        <Link to="/">
+                        <Link className="flex justify-center" to="/">
                             {/* Rei dev */}
                             <img src={Logo} alt="Rei-dev logo" />
                         </Link>
@@ -32,8 +32,8 @@ export const Header = () => {
                         </p>
                     </Brand>
                 </FlexItem>
-                <Row as={FlexItem} size={9} align={"center"} className={`menu ${menuActive ? 'active' : ''}`}>
-                    <FlexItem size={8}>
+                <Row as={FlexItem} size={[{ query: 0, value: 9 }, { query: 552, value: 10 }]} align={"center"} className={`menu ${menuActive ? 'active' : ''}`}>
+                    <FlexItem size={[{ query: 0, value: 9 }, { query: 1142, value: 8 }]}>
                         <NavMenu>
                             <ul>
                                 {
@@ -48,7 +48,7 @@ export const Header = () => {
                             </ul>
                         </NavMenu>
                     </FlexItem>
-                    <FlexItem size={4} id="buttons-nav-menu">
+                    <FlexItem size={[{ query: 0, value: 3 }, { query: 1142, value: 4 }]} id="buttons-nav-menu">
                         <Row as="ul" align={"center"}>
                             <FlexItem as="li" size={5}>
                                 <Button border={"primary"}>
@@ -76,6 +76,6 @@ export const Header = () => {
                     </Button>
                 </Row>
             </Row>
-        </Container>
+        </Container >
     )
 }
