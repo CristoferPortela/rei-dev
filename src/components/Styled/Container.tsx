@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 interface iContainer {
-    bg: string;
+    bg?: string;
+    shadow?: string;
 }
 
-export const Container = styled.div.attrs({ className: 'container' })<iContainer>`
+export const Container = styled.div.attrs({ className: 'container' }) <iContainer>`
+    display: block;
     background-color: ${(props) => props.bg || 'none'};
 `;
