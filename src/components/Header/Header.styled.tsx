@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Brand = styled.div`
-    @media screen and (min-width: 992px) {
+display: flex;
+flex-wrap: wrap;
+    @media screen and (min-width: 1142px) {
         flex: 0 0 auto;
         width: auto;
         display: flex;
@@ -17,6 +19,10 @@ export const Brand = styled.div`
         font-size: 1.2rem;
         font-weight: 600;
         text-align: center;
+        @media screen and (max-width: 1141px) {
+            width: 100%;
+            flex: 0 0 100%;
+        }
         @media screen and (min-width: 992px) {
             margin-left: -20px;
         }
@@ -25,7 +31,7 @@ export const Brand = styled.div`
 
 export const NavMenu = styled.nav`
     height: 100%;
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1142px) {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
