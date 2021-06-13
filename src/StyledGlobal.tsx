@@ -10,6 +10,9 @@ interface iColors {
     success: string;
     danger: string;
     warning: string;
+
+    transparent: string;
+    
     [key: string]: string;
 }
 interface iSizing {
@@ -18,6 +21,7 @@ interface iSizing {
 
 interface iFunctions {
     chooseTextColor: (color: string) => string;
+    transparentize: (transparency: number[]) => string,
 }
 
 export interface iTheme {
@@ -40,6 +44,7 @@ export const StyledTheme: iTheme = {
         success: "",
         danger: "",
         warning: "",
+        transparent: "rgba(0, 0, 0, 0)",
     },
     sizing: {
         sliderHeight: 450,
@@ -52,7 +57,8 @@ export const StyledTheme: iTheme = {
             
             const rgb = red + green + blue;
             return parseInt(rgb.toString(), 16) > 186 ? "#00000" : "#FFFFF";
-        }
+        },
+        transparentize: (transparency = [0, 0, 0, 0]) => `rgba(${transparency.join(', ')})`,
     }
 }
 
